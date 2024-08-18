@@ -1,4 +1,5 @@
 let texto = '';
+limparEncriptacion();
 
 function insertarTextoEnElemento(elemento, texto) {
     let elementoHTML = document.querySelector(elemento);
@@ -77,7 +78,7 @@ function mostrarEncriptacion(texto) {
         elementosVacios[i].setAttribute('hidden', true);
     }
     for (let i = 0; i < elementosSalida.length; i++) {
-        elementosSalida[i].removeAttribute('hidden');
+        mi = elementosSalida[i].removeAttribute("hidden");
     }
     insertarTextoEnElemento('.resultado__salida__texto', texto);
 }
@@ -87,5 +88,12 @@ function copiarEncriptada() {
 }
 
 function limparEncriptacion() {
-    document.getElementById('resultado__vacio').setAttribute('hidden', false);
+    let elementosVacios = document.getElementsByClassName('resultado__vacio');
+    let elementosSalida = document.getElementsByClassName('resultado__salida');
+    for (let i = 0; i < elementosVacios.length; i++) {
+        elementosVacios[i].removeAttribute('hidden');
+    }
+    for (let i = 0; i < elementosSalida.length; i++) {
+        elementosSalida[i].setAttribute('hidden', true);
+    }
 }

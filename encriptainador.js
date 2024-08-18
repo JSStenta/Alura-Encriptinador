@@ -79,7 +79,7 @@ function mostrarEncriptacion(texto) {
     for (let i = 0; i < elementosSalida.length; i++) {
         elementosSalida[i].removeAttribute('hidden');
     }
-    insertarTextoEnElemento('#resultado__salida__texto', texto);
+    insertarTextoEnElemento('.resultado__salida__texto', texto);
 }
 
 function copiarEncriptada() {

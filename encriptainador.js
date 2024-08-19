@@ -8,11 +8,11 @@ function insertarTextoEnElemento(elemento, texto) {
 }
 
 /*
-La letra "a" es convertida para "ai"
-La letra "e" es convertida para "enter"
-La letra "i" es convertida para "imes"
-La letra "o" es convertida para "ober"
-La letra "u" es convertida para "ufat"
+    La letra "a" es convertida para "ai"
+    La letra "e" es convertida para "enter"
+    La letra "i" es convertida para "imes"
+    La letra "o" es convertida para "ober"
+    La letra "u" es convertida para "ufat"
 */
 function encriptainador() {
     let textoUsuario = document.getElementById('textoUsuario').value;

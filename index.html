@@ -19,15 +19,16 @@
         </header>
         <main class="main">
             <section class="encriptainador">
-                <input class="encriptainador__entrada" id="textoUsuario" type="text" onfocus="this.value=''"
-                    value="Ingrese el texto aqui">
-                <p>
-                    Solo letras minúsculas y sin acentos
+                <input class="encriptainador__entrada texto" id="textoUsuario" type="text" value="Ingrese el texto aquí">
+                <p class="encriptainador__aclaracion">
+                    <img src="assets/bi_exclamation-circle-fill.png" alt="Exclamation" width="16px">Solo letras minúsculas y sin acentos.
                 </p>
-                <input class="encriptainador__encriptar" id="encriptar" type="button" onclick="encriptainador();"
-                    value="Encriptar">
-                <input class="encriptainador__desencriptar" id="desencriptar" type="button"
-                    onclick="desencriptainador();" value="Desencriptar">
+                <div class="encriptainador__botones">
+                    <input class="encriptainador__botones__boton botones" id="encriptar" type="button"
+                        onclick="encriptainador();" value="Encriptar">
+                    <input class="encriptainador__botones__boton botones" id="desencriptar" type="button"
+                        onclick="desencriptainador();" value="Desencriptar">
+                </div>
             </section>
             <section class="resultado">
                 <div class="resultado__vacio">
@@ -36,14 +37,14 @@
                     <p class="resultado__vacio__texto">Ingresa el texto que desees encriptar o desencriptar.</p>
                 </div>
                 <div class="resultado__salida">
-                    <p class="resultado__salida__texto"></p>
-                    <input class="resultado__salida__boton" type="button" value="Copiar texto"
+                    <p class="resultado__salida__texto texto"></p>
+                    <input class="resultado__salida__boton botones" type="button" value="Copiar"
                         onclick="copiarEncriptada()">
                 </div>
             </section>
         </main>
-        <footer class="footer"></footer>
         <script src="encriptainador.js"></script>
+        <footer class="footer"> Desarrollador por Juansezhin</footer>
     </body>
 
 </html>

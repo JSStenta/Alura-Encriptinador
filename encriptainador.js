@@ -1,8 +1,6 @@
 // Estado inicial de la página
 let texto = '';
 limparEncriptacion();
-document.getElementById('textoUsuario').onfocus = function () { this.value = (this.value == 'Ingrese el texto aquí') ? '' : this.value; }
-document.getElementById('textoUsuario').onblur = function () { this.value = (this.value == '') ? 'Ingrese el texto aquí' : this.value; }
 function limparEncriptacion() {
     let elementosVacios = document.getElementsByClassName('resultado__vacio');
     let elementosSalida = document.getElementsByClassName('resultado__salida');
@@ -32,7 +30,7 @@ function insertarTextoEnElemento(elemento, texto) {
 function encriptainador() {
     let textoUsuario = document.getElementById('textoUsuario').value;
     textoUsuario = textoUsuario;
-    if (textoUsuario !== 'Ingrese el texto aquí') {
+    if (textoUsuario !== '') {
         let salida = '';
         for (caracter of textoUsuario) {
             switch (caracter.toLowerCase()) {
@@ -65,7 +63,7 @@ function encriptainador() {
 // Funcion para desencriptar el mensaje de enetrada
 function desencriptainador() {
     let textoUsuario = document.getElementById('textoUsuario').value;
-    if (textoUsuario !== 'Ingrese el texto aquí') {
+    if (textoUsuario !== '') {
         let salida = '';
         for (let i = 0; i < textoUsuario.length; i++) {
             let caracter = textoUsuario[i];

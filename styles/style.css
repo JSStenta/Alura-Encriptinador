@@ -11,53 +11,56 @@
 }
 
 * {
-    padding: 0;
-    margin: 0;
+    box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-size: var(--tamano-fuente);
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-color: var(--color-primario);
-    padding: 40px;
-    height: 95vh;
     display: flex;
+    height: 95vh;
+    padding: 40px;
+    min-width: 250px;
 }
 
 .main {
-    width: 100%;
-    height: 100%;
+    color: var(--color-secundario);
     display: flex;
     flex-direction: row;
-    align-items: center;
-    color: var(--color-secundario);
     gap: 40px;
-    border: 1px solid yellow;
+    height: 100%;
     justify-content: flex-end;
     justify-items: left;
-    align-items: flex-start;
+    width: 100%;
 }
 
 /* Seccion de la entrada de la encriptacion */
 .encriptainador {
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 100%;
+    border: 1px solid red;
+    min-height: 50%;
 }
 
 .encriptainador__entrada {
-    border: 1px solid var(--color-secundario);
-    color: var(--color-secundario);
     background-color: transparent;
+    border: 1px solid var(--color-secundario);
     border-radius: 32px;
+    color: var(--color-secundario);
     font-size: 1.5rem;
-    width: 100%;
     height: 100%;
-    overflow: hidden;
-    white-space: nowrap;
+    overflow: scroll;
+    padding: 10px;
+    width: 100%;
+}
+
+textarea::placeholder {
+    color: var(--color-secundario);
 }
 
 .encriptainador__entrada:focus,
@@ -67,23 +70,24 @@ body {
 
 /* Seccion del resultado de la encriptacion */
 .resultado {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    min-width: 400px;
+    min-height: 50%;
     align-items: center;
-    font-size: var(--tamano-fuente)*1.5;
     background-color: #FFF;
-    color: #000;
     border-radius: 32px;
     box-shadow: 0 0 1rem var(--color-terciario);
-    text-align: center;
-    height: 100%;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(var(--tamano-fuente)*(13));
+    min-height: 100%;
+    justify-content: center;
+    min-width: 400px;
+    max-width: 400px;
     padding: 32px;
-    border: 1px solid red;
+    text-align: center;
 }
 
-.resultado__vacio__titulo:not([hidden]) {
+.resultado__vacio__titulo {
     font-size: calc(var(--tamano-fuente)*1.5);
 }
 
@@ -94,35 +98,35 @@ body {
     width: 100%;
 }
 
-.resultado__salida__texto:not([hidden]) {
+.resultado__salida__texto {
+    color: #000;
+    font-weight: 600;
     height: 100%;
     width: 100%;
-    font-weight: 600;
-    color: #000;
 }
 
 .texto {
+    resize: none;
     word-wrap: break-word;
 }
 
-
 /* Botones */
 .encriptainador__botones {
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    max-width: 680px;
-    gap: 24px;
     display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: center;
+    max-width: 680px;
+    width: 100%;
 }
 
 .botones {
-    border-radius: 24px;
-    width: 100%;
-    height: calc(var(--tamano-fuente)*4);
     background-color: var(--color-primario);
-    color: var(--color-secundario);
     border: 1px solid var(--color-secundario);
+    border-radius: 24px;
+    color: var(--color-secundario);
+    height: calc(var(--tamano-fuente)*4);
+    width: 100%;
 }
 
 .botones:hover {
@@ -137,18 +141,18 @@ body {
 
 /* Pie de pagina */
 .footer {
-    /* background-color: var(--color-terciario); */
-    text-align: center;
-    color: #000000;
-    font-size: var(--tamano-fuente);
-    height: 5vh;
-    position: fixed;
-    min-height: calc(var(--tamano-fuente)*1.5);
     align-content: center;
     bottom: 0;
-    left: 0;
-    width: 100%;
+    color: #000000;
+    font-size: var(--tamano-fuente);
     font-weight: 600;
+    height: 5vh;
+    left: 0;
+    min-height: calc(var(--tamano-fuente)*1.5);
+    position: fixed;
+    background-color: var(--color-terciario);
+    text-align: center;
+    width: 100%;
 }
 
 /* Media Queries */
@@ -162,19 +166,27 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        align-items: center;
+        flex-direction: column;
+    }
+    
     .resultado__vacio__imagen {
         display: none;
     }
-
+    
     .main {
+        justify-content: flex-start;
         flex-direction: column;
     }
 
     .resultado {
-        width: 100%;
+        min-width: 100%;
+        height: auto;
     }
 
     .encriptainador {
+        height: auto;
         width: 100%;
     }
 
@@ -184,10 +196,8 @@ body {
 }
 
 @media (max-width: 375px) {
-
     .encriptainador__botones {
-        width: 100%;
         flex-direction: column;
+        width: 100%;
     }
-
 }

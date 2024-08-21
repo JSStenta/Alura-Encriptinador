@@ -24,6 +24,7 @@ body {
     margin-bottom: 5vh;
     min-height: 95vh;
     min-width: 290px;
+    gap: var(--tamano-fuente);
     padding: 5vh;
 }
 
@@ -31,7 +32,7 @@ body {
     color: var(--color-secundario);
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    gap: calc(var(--tamano-fuente)*2.5);
     width: 100%;
 }
 
@@ -78,6 +79,7 @@ textarea::placeholder {
     padding: 32px;
     text-align: center;
     width: 400px;
+    gap: 32px
 }
 
 .resultado__vacio__titulo {
@@ -87,6 +89,7 @@ textarea::placeholder {
 .resultado__salida:not([hidden]) {
     display: flex;
     flex-direction: column;
+    gap: calc(var(--tamano-fuente)*2);
     height: 100%;
 }
 
@@ -95,13 +98,14 @@ textarea::placeholder {
     font-size: calc(var(--tamano-fuente)*1.5);
     height: 100%;
     width: 100%;
+    word-wrap: break-word;
 }
 
 /* Botones */
 .encriptainador__botones {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    gap: calc(var(--tamano-fuente)*1.5);
     justify-content: center;
     width: 100%;
 }
@@ -155,7 +159,6 @@ textarea::placeholder {
     body {
         align-items: center;
         flex-direction: column;
-        gap: var(--tamano-fuente);
         padding-top: var(--tamano-fuente);
     }
 

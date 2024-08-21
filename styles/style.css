@@ -21,10 +21,10 @@
 body {
     background-color: var(--color-primario);
     display: flex;
+    gap: var(--tamano-fuente);
     margin-bottom: 5vh;
     min-height: 95vh;
     min-width: 290px;
-    gap: var(--tamano-fuente);
     padding: 5vh;
 }
 
@@ -57,13 +57,13 @@ body {
     width: 100%;
 }
 
-textarea::placeholder {
-    color: var(--color-secundario);
-}
-
 .encriptainador__entrada:focus,
 .encriptainador__entrada:hover {
     box-shadow: 0 0 1rem var(--color-terciario);
+}
+
+textarea::placeholder {
+    color: var(--color-secundario);
 }
 
 /* Seccion del resultado de la encriptacion */
@@ -79,11 +79,6 @@ textarea::placeholder {
     padding: 32px;
     text-align: center;
     width: 400px;
-    gap: 32px
-}
-
-.resultado__vacio__titulo {
-    font-size: calc(var(--tamano-fuente)*1.5);
 }
 
 .resultado__salida:not([hidden]) {
@@ -101,15 +96,11 @@ textarea::placeholder {
     word-wrap: break-word;
 }
 
-/* Botones */
-.encriptainador__botones {
-    display: flex;
-    flex-direction: row;
-    gap: calc(var(--tamano-fuente)*1.5);
-    justify-content: center;
-    width: 100%;
+.resultado__vacio__titulo {
+    font-size: calc(var(--tamano-fuente)*1.5);
 }
 
+/* Botones */
 .botones {
     background-color: var(--color-primario);
     border: 1px solid var(--color-secundario);
@@ -127,6 +118,14 @@ textarea::placeholder {
 .botones:active {
     background-color: var(--color-secundario);
     color: var(--color-primario);
+}
+
+.encriptainador__botones {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--tamano-fuente)*1.5);
+    justify-content: center;
+    width: 100%;
 }
 
 /* Pie de pagina */
@@ -162,18 +161,8 @@ textarea::placeholder {
         padding-top: var(--tamano-fuente);
     }
 
-    .resultado__vacio__imagen {
-        display: none;
-    }
-
     .main {
         flex-direction: column;
-    }
-
-    .resultado {
-        height: auto;
-        min-width: 100%;
-        width: 100%;
     }
 
     .encriptainador {
@@ -182,6 +171,16 @@ textarea::placeholder {
 
     .encriptainador__botones {
         width: 100%;
+    }
+
+    .resultado {
+        height: auto;
+        min-width: 100%;
+        width: 100%;
+    }
+
+    .resultado__vacio__imagen {
+        display: none;
     }
 }
 

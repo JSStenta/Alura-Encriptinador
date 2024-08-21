@@ -21,9 +21,10 @@
 body {
     background-color: var(--color-primario);
     display: flex;
-    height: 95vh;
-    padding: 40px;
-    min-width: 250px;
+    min-height: 95vh;
+    min-width: 290px;
+    padding: 5vh;
+    margin-bottom: 5vh;
 }
 
 .main {
@@ -31,9 +32,7 @@ body {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    height: 100%;
-    justify-content: flex-end;
-    justify-items: left;
+    min-height: 100%;
     width: 100%;
 }
 
@@ -41,10 +40,10 @@ body {
 .encriptainador {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    min-height: auto;
+    height: 100%;
     width: 100%;
     border: 1px solid red;
-    min-height: 50%;
 }
 
 .encriptainador__entrada {
@@ -52,10 +51,11 @@ body {
     border: 1px solid var(--color-secundario);
     border-radius: 32px;
     color: var(--color-secundario);
-    font-size: 1.5rem;
+    font-size: calc(var(--tamano-fuente)*2);
     height: 100%;
-    overflow: scroll;
-    padding: 10px;
+    min-height: 30vh;
+    padding: 16px;
+    resize: none;
     width: 100%;
 }
 
@@ -70,19 +70,15 @@ textarea::placeholder {
 
 /* Seccion del resultado de la encriptacion */
 .resultado {
-    min-height: 50%;
-    align-items: center;
     background-color: #FFF;
     border-radius: 32px;
     box-shadow: 0 0 1rem var(--color-terciario);
     color: #000;
     display: flex;
     flex-direction: column;
-    font-size: calc(var(--tamano-fuente)*(13));
-    min-height: 100%;
     justify-content: center;
     min-width: 400px;
-    max-width: 400px;
+    width: 400px;
     padding: 32px;
     text-align: center;
 }
@@ -95,19 +91,13 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     height: 100%;
-    width: 100%;
 }
 
 .resultado__salida__texto {
     color: #000;
-    font-weight: 600;
+    font-size: calc(var(--tamano-fuente)*1.5);
     height: 100%;
     width: 100%;
-}
-
-.texto {
-    resize: none;
-    word-wrap: break-word;
 }
 
 /* Botones */
@@ -116,7 +106,6 @@ textarea::placeholder {
     flex-direction: row;
     gap: 24px;
     justify-content: center;
-    max-width: 680px;
     width: 100%;
 }
 
@@ -142,6 +131,7 @@ textarea::placeholder {
 /* Pie de pagina */
 .footer {
     align-content: center;
+    background-color: var(--color-terciario);
     bottom: 0;
     color: #000000;
     font-size: var(--tamano-fuente);
@@ -150,7 +140,6 @@ textarea::placeholder {
     left: 0;
     min-height: calc(var(--tamano-fuente)*1.5);
     position: fixed;
-    background-color: var(--color-terciario);
     text-align: center;
     width: 100%;
 }
@@ -168,25 +157,26 @@ textarea::placeholder {
 @media (max-width: 768px) {
     body {
         align-items: center;
+        gap: var(--tamano-fuente);
         flex-direction: column;
+        padding-top: var(--tamano-fuente);
     }
-    
+
     .resultado__vacio__imagen {
         display: none;
     }
-    
+
     .main {
-        justify-content: flex-start;
         flex-direction: column;
     }
 
     .resultado {
-        min-width: 100%;
         height: auto;
+        min-width: 100%;
+        width: 100%;
     }
 
     .encriptainador {
-        height: auto;
         width: 100%;
     }
 
@@ -196,6 +186,10 @@ textarea::placeholder {
 }
 
 @media (max-width: 375px) {
+    body {
+        padding: var(--tamano-fuente);
+    }
+
     .encriptainador__botones {
         flex-direction: column;
         width: 100%;

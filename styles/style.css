@@ -21,10 +21,10 @@
 body {
     background-color: var(--color-primario);
     display: flex;
+    margin-bottom: 5vh;
     min-height: 95vh;
     min-width: 290px;
     padding: 5vh;
-    margin-bottom: 5vh;
 }
 
 .main {
@@ -32,7 +32,6 @@ body {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    min-height: 100%;
     width: 100%;
 }
 
@@ -40,10 +39,8 @@ body {
 .encriptainador {
     display: flex;
     flex-direction: column;
-    min-height: auto;
     height: 100%;
     width: 100%;
-    border: 1px solid red;
 }
 
 .encriptainador__entrada {
@@ -78,9 +75,9 @@ textarea::placeholder {
     flex-direction: column;
     justify-content: center;
     min-width: 400px;
-    width: 400px;
     padding: 32px;
     text-align: center;
+    width: 400px;
 }
 
 .resultado__vacio__titulo {
@@ -157,8 +154,8 @@ textarea::placeholder {
 @media (max-width: 768px) {
     body {
         align-items: center;
-        gap: var(--tamano-fuente);
         flex-direction: column;
+        gap: var(--tamano-fuente);
         padding-top: var(--tamano-fuente);
     }
 

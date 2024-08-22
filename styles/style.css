@@ -51,7 +51,7 @@ body {
     color: var(--color-secundario);
     font-size: calc(var(--tamano-fuente)*2);
     height: 100%;
-    min-height: 30vh;
+    min-height: 25vh;
     padding: 16px;
     resize: none;
     width: 100%;

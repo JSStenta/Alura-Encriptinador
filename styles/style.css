@@ -47,7 +47,7 @@ body {
 .encriptainador__entrada {
     background-color: transparent;
     border: 1px solid var(--color-secundario);
-    border-radius: 32px;
+    border-radius: calc(var(--tamano-fuente)*2);
     color: var(--color-secundario);
     font-size: calc(var(--tamano-fuente)*2);
     height: 100%;
@@ -69,7 +69,7 @@ textarea::placeholder {
 /* Seccion del resultado de la encriptacion */
 .resultado {
     background-color: #FFF;
-    border-radius: 32px;
+    border-radius: calc(var(--tamano-fuente)*2);
     box-shadow: 0 0 1rem var(--color-terciario);
     color: #000;
     display: flex;
@@ -104,7 +104,7 @@ textarea::placeholder {
 .botones {
     background-color: var(--color-primario);
     border: 1px solid var(--color-secundario);
-    border-radius: 24px;
+    border-radius: calc(var(--tamano-fuente)*1.5);
     color: var(--color-secundario);
     height: calc(var(--tamano-fuente)*4);
     width: 100%;
@@ -142,6 +142,7 @@ textarea::placeholder {
     position: fixed;
     text-align: center;
     width: 100%;
+    border-radius: var(--tamano-fuente) var(--tamano-fuente) 0 0;
 }
 
 /* Media Queries */

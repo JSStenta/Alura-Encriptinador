@@ -10,6 +10,7 @@ function limparEncriptacion() {
     for (let i = 0; i < elementosSalida.length; i++) {
         elementosSalida[i].setAttribute('hidden', true);
     }
+    //document.getElementById('limpiainador').setAttribute();
 }
 
 // Funcion generica para insertar un texto dado en determinado elemento
@@ -58,6 +59,10 @@ function encriptainador() {
         mostrarEncriptacion(salida);
     }
     return;
+}
+
+function limpiainador() {
+    document.getElementById('textoUsuario').value = '';
 }
 
 // Funcion para desencriptar el mensaje de enetrada

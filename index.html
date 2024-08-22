@@ -19,15 +19,19 @@
         </header>
         <main class="main">
             <section class="encriptainador">
-                <textarea class="encriptainador__entrada texto" rows="auto" cols="auto" placeholder="Ingrese el texto aquí" id="textoUsuario"></textarea>
+                <textarea class="encriptainador__entrada texto" id="textoUsuario" rows="auto" cols="auto"
+                    placeholder="Ingrese el texto aquí"></textarea>
                 <p class="encriptainador__aclaracion">
-                    <img src="assets/bi_exclamation-circle-fill.png" alt="Exclamation" width="16px">Solo letras minúsculas y sin acentos.
+                    <img src="assets/bi_exclamation-circle-fill.png" alt="Exclamation" width="16px">Solo letras
+                    minúsculas y sin acentos.
                 </p>
                 <div class="encriptainador__botones">
-                    <input class="encriptainador__botones__boton botones" id="encriptar" type="button"
+                    <input class="encriptainador__botones__boton botones" id="encriptar" type="button" title="🔒"
                         onclick="encriptainador();" value="Encriptar">
-                    <input class="encriptainador__botones__boton botones" id="desencriptar" type="button"
+                    <input class="encriptainador__botones__boton botones" id="desencriptar" type="button" title="🔓"
                         onclick="desencriptainador();" value="Desencriptar">
+                    <input class="encriptainador__botones__boton botones" id="limpiar" type="button" title="🧽"
+                        onclick="limpiainador();" value="Limpiar">
                 </div>
             </section>
             <section class="resultado">

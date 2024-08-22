@@ -42,6 +42,7 @@ body {
     flex-direction: column;
     height: 100%;
     width: 100%;
+    gap: calc(var(--tamano-fuente)/4);
 }
 
 .encriptainador__entrada {
@@ -64,6 +65,12 @@ body {
 
 textarea::placeholder {
     color: var(--color-secundario);
+}
+
+.encriptainador__aclaracion{
+    display: flex;
+    align-items: center;
+    gap: calc(var(--tamano-fuente)/2);
 }
 
 /* Seccion del resultado de la encriptacion */
@@ -192,6 +199,7 @@ textarea::placeholder {
 
     .encriptainador__botones {
         flex-direction: column;
+        gap: calc(var(--tamano-fuente)/2);
         width: 100%;
     }
 }

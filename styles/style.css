@@ -40,9 +40,9 @@ body {
 .encriptainador {
     display: flex;
     flex-direction: column;
+    gap: calc(var(--tamano-fuente)/4);
     height: 100%;
     width: 100%;
-    gap: calc(var(--tamano-fuente)/4);
 }
 
 .encriptainador__entrada {
@@ -68,8 +68,8 @@ textarea::placeholder {
 }
 
 .encriptainador__aclaracion{
-    display: flex;
     align-items: center;
+    display: flex;
     gap: calc(var(--tamano-fuente)/2);
 }
 
@@ -139,6 +139,7 @@ textarea::placeholder {
 .footer {
     align-content: center;
     background-color: var(--color-terciario);
+    border-radius: var(--tamano-fuente) var(--tamano-fuente) 0 0;
     bottom: 0;
     color: #000000;
     font-size: var(--tamano-fuente);
@@ -149,7 +150,6 @@ textarea::placeholder {
     position: fixed;
     text-align: center;
     width: 100%;
-    border-radius: var(--tamano-fuente) var(--tamano-fuente) 0 0;
 }
 
 /* Media Queries */

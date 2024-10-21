@@ -1,11 +1,11 @@
-# 🔐 Encriptador de Texto
+# Encriptador de Texto 🔐
 
-## 📋 Descripción  
+## Descripción 📋
 Este proyecto es parte de un **challenge** enfocado en aplicar conceptos de **lógica de programación** utilizando **HTML, CSS y JavaScript**. El objetivo es desarrollar un **encriptador de texto** que permita al usuario transformar mensajes mediante un algoritmo de encriptación básico, aplicando habilidades en la manipulación de datos.
 
 ---
 
-### 🚀 Demo  
+### Demo 🚀
 [Enlace al encriptinador](https://jsstenta.github.io/Alura-Encriptinador/) 
 
 ---

@@ -1,4 +1,5 @@
 # Encriptador de Texto 🔐
+[![en](https://img.shields.io/badge/lang-en-red)](/README-EN.md)
 
 ## Descripción 📋
 Este proyecto es parte de un **challenge** enfocado en aplicar conceptos de **lógica de programación** utilizando **HTML, CSS y JavaScript**. El objetivo es desarrollar un **encriptador de texto** que permita al usuario transformar mensajes mediante un algoritmo de encriptación básico, aplicando habilidades en la manipulación de datos.
@@ -61,3 +62,8 @@ Este desafío pone en práctica conocimientos adquiridos en cursos de lógica de
 - Implementación de algoritmos básicos.
 - Integración de HTML, CSS y JavaScript en un proyecto completo.
 - Desarrollo de habilidades en la lógica de programación.
+
+---
+
+## Agradecimientos 🤝
+Agradecimientos a **Oracle Next Education** y **Alura** por brindar los conocimientos y recursos para desarrollar este proyecto.
